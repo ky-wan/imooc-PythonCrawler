@@ -34,4 +34,3 @@ class UrlManager(object):
         self.add_new_url(new_url)
         # 返回新的url
         return new_url
-
