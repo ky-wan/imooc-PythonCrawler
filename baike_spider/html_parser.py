@@ -14,7 +14,6 @@ class HtmlParser(object):
             # 拼接为完整url
             new_full_url=parse.urljoin(page_url,new_url)
             new_urls.add(new_full_url)
-
         return new_urls
 
     def _get_new_data(self, page_url, soup):
@@ -31,7 +30,6 @@ class HtmlParser(object):
         if summary_node is None:
             return
         res_data['summary'] = summary_node.get_text()
-
         return res_data
 
     def parse(self, page_url, html_cont):
