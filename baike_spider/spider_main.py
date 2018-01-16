@@ -30,15 +30,12 @@ class SpiderMain(object):
                 self.urls.add_new_urls(new_urls)
                 # 收集数据
                 self.outputer.collect_data(new_data)
-
                 # 设置爬取数
                 if count == 100:
                     break
-
                 count = count + 1
             except Exception as e:
                 print(str(e))
-
         # 输出收集好的数据
         self.outputer.output_html()
 
@@ -49,17 +46,4 @@ if __name__ == '__main__':
     obj_spider=SpiderMain()
     # 启动爬虫
     obj_spider.craw(root_url)
-
-
-
-
-
-
-
-
-
-
-
-
-
 
